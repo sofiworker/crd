@@ -1,0 +1,9 @@
+apiVersion: sofiworker.sofiworker.me/v1alpha1
+kind: MyCrd
+metadata:
+  name: mycrd-sample
+  namespace: default
+spec:
+  replicas: 2
+  image: nginx
+  # TODO(user): Add fields here

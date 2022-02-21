@@ -1,0 +1,24 @@
+# permissions for end users to edit mycrds.
+apiVersion: rbac.authorization.k8s.io/v1
+kind: ClusterRole
+metadata:
+  name: mycrd-editor-role
+rules:
+- apiGroups:
+  - sofiworker.sofiworker.me
+  resources:
+  - mycrds
+  verbs:
+  - create
+  - delete
+  - get
+  - list
+  - patch
+  - update
+  - watch
+- apiGroups:
+  - sofiworker.sofiworker.me
+  resources:
+  - mycrds/status
+  verbs:
+  - get
